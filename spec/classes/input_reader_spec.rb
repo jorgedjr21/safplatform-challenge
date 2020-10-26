@@ -7,7 +7,7 @@ RSpec.describe InputReader do
     end
   end
 
-  context 'when read the input file' do
+  context '#read' do
     context 'when file exists' do
       subject { InputReader.new(file_name: 'spec/input_mock.txt').read }
 
