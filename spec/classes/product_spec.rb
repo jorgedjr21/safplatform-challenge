@@ -16,6 +16,10 @@ RSpec.describe Product do
       it 'should have a defined imported' do
         expect(subject.imported).to be_truthy
       end
+
+      it 'should have a defined taxed price' do
+        expect(subject.taxed_price).to eq(11.5)
+      end
     end
 
     context 'without attributes' do
