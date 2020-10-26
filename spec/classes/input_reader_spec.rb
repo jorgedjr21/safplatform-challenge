@@ -8,9 +8,20 @@ RSpec.describe InputReader do
   end
 
   context 'when read the input file' do
-    subject { InputReader.new(file_name: 'spec/input_mock.txt').read }
-    it 'must have a array of inputs' do
-      expect(subject).to eq(%w[testing testing2])
+    context 'when file exists' do
+      subject { InputReader.new(file_name: 'spec/input_mock.txt').read }
+
+      it 'must have a array of inputs' do
+        expect(subject).to eq(%w[testing testing2])
+      end
+    end
+
+    context 'when file don\'t exists' do
+      subject { InputReader.new(file_name: 'spec/input.txt').read }
+
+      it 'must raise a error' do
+        expect { subject }.to raise_error(Errno::ENOENT)
+      end
     end
   end
 end
