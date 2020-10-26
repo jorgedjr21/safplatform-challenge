@@ -25,7 +25,7 @@ class InputProcessor
       price    = extract_product_price(product)
       quantity = extract_product_quantity(product)
       imported = product.downcase.include?('imported')
-
+      
       products << {
         product: Product.new(name: product, price: price, imported: imported),
         quantity: quantity
