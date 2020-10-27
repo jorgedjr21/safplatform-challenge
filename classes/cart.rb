@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require_relative 'tax'
-
 # TODO: specs
 # Represents the products in a shopping cart
 class Cart
