@@ -1,8 +1,9 @@
+# frozen_string_literal: true
+
 require_relative 'product'
 require_relative 'cart'
 
 class InputProcessor
-
   def initialize(inputs:)
     @inputs = inputs
   end
@@ -25,7 +26,7 @@ class InputProcessor
       price    = extract_product_price(product)
       quantity = extract_product_quantity(product)
       imported = product.downcase.include?('imported')
-      
+
       products << {
         product: Product.new(name: product, price: price, imported: imported),
         quantity: quantity

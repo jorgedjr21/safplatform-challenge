@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Read the input file and return the inputs
 class InputReader
   def initialize(file_name:)

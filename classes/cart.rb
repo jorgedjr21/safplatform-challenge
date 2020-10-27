@@ -1,6 +1,9 @@
+# frozen_string_literal: true
+
 require_relative 'tax'
 
 # TODO: specs
+# Represents the products in a shopping cart
 class Cart
   attr_accessor :cart_items, :total_without_tax, :total_with_tax
 
@@ -30,6 +33,6 @@ class Cart
   private
 
   def round_to_nearest(value)
-    ((value * 20).round(4) / 20.0).round(2)
+    ((value * 20) / 20.0).round(2)
   end
 end

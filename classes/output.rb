@@ -1,4 +1,4 @@
-# TODO: specs
+# frozen_string_literal: true
 
 class Output
   def initialize(cart:)
@@ -7,10 +7,11 @@ class Output
 
   def print_formatted
     @cart.cart_items.each do |cart_item|
-      puts "#{cart_item[:quantity]} #{cart_item[:product].name} #{cart_item[:product].taxed_price} \n"
+      puts "#{cart_item[:quantity]} #{cart_item[:product].name} #{cart_item[:quantity] * cart_item[:product].taxed_price} \n"
     end
 
-    puts "Sales taxes: #{@cart.total_tax}\n"
+    total_tax = sprintf('%.2f', @cart.total_tax)
+    puts "Sales taxes: #{total_tax}\n"
     puts "Total: #{@cart.total_with_tax}"
   end
 end
