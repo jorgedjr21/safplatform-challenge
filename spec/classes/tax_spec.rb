@@ -10,8 +10,8 @@ RSpec.describe Tax do
     end
 
     context 'imported' do
-      it 'boxes of chocolates must be 1.05 (5% import tax)' do
-        product = Product.new(name: 'imported boxes of chocolates', price: 10.0, imported: true)
+      it 'box of chocolates must be 1.05 (5% import tax)' do
+        product = Product.new(name: 'imported box of chocolates', price: 10.0, imported: true)
 
         expect(Tax.product_tax(product)).to eq(1.05)
       end
