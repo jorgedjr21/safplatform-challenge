@@ -36,8 +36,8 @@ class InputProcessor
   end
 
   def extract_product_price(input)
-    price = input.scan(/[0-9]+.[0-9]+/).last.to_f
-    input.gsub!(/ at +[0-9]+.[0-9]+/, '')
+    price = input.scan(/[0-9]+.[0-9]+|[0-9]+/).last.to_f
+    input.gsub!(/ at +[0-9]+.[0-9]+| at [0-9]+/, '')
     price
   end
 
