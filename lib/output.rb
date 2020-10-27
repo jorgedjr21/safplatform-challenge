@@ -6,7 +6,7 @@ class Output
   end
 
   def print_formatted
-    @cart.cart_items.each do |cart_item|
+    @cart.items.each do |cart_item|
       puts "#{cart_item[:quantity]} #{cart_item[:product].name}: #{cart_item[:quantity] * cart_item[:product].taxed_price} \n"
     end
 

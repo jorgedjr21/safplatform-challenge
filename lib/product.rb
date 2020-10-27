@@ -4,6 +4,7 @@ require_relative 'tax'
 
 class Product
   attr_accessor :name, :price, :imported, :taxed_price
+  ROUND_NUMBER = 0.05
 
   def initialize(name:, price:, imported: false)
     @name     = name
@@ -21,7 +22,7 @@ class Product
     diff = value - rounded
 
     @taxed_price = if diff.positive? && diff < 0.05
-                     (rounded + 0.05).round(2)
+                     (rounded + ROUND_NUMBER).round(2)
                    else
                      value.round(2)
                    end

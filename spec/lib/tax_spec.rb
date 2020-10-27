@@ -1,5 +1,5 @@
-require_relative '../../lib/classes/tax'
-require_relative '../../lib/classes/product'
+require_relative '../../lib/tax'
+require_relative '../../lib/product'
 
 RSpec.describe Tax do
   context '#product_tax' do
