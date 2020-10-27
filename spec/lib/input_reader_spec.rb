@@ -16,7 +16,7 @@ RSpec.describe InputReader do
       end
     end
 
-    context 'when file don\'t exists' do
+    context 'when file doesn\'t exist' do
       subject(:input_reader) { InputReader.new(file_name: 'spec/input.txt').read }
 
       it 'must raise a error' do
