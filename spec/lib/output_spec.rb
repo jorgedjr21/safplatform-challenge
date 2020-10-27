@@ -78,7 +78,7 @@ RSpec.describe Output do
     end
 
     it 'must have the correct output result' do
-      expect { formatted_output }.to output("1 imported box of chocolates: 10.5 \n1 imported bottle of perfume: 54.65 \nSales Taxes: 7.65\nTotal: 65.15\n").to_stdout
+      expect { formatted_output }.to output("1 imported box of chocolates: 10.50 \n1 imported bottle of perfume: 54.65 \nSales Taxes: 7.65\nTotal: 65.15\n").to_stdout
     end
   end
 
