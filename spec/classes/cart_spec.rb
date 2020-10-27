@@ -53,7 +53,7 @@ RSpec.describe Cart do
 
     context '#total_tax' do
       subject { cart.total_tax }
-      
+
       before do
         cart.calculate_total_without_tax
         cart.calculate_total_with_tax
