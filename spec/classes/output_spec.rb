@@ -1,6 +1,6 @@
-require_relative '../../classes/output'
-require_relative '../../classes/cart'
-require_relative '../../classes/product'
+require_relative '../../lib/classes/output'
+require_relative '../../lib/classes/cart'
+require_relative '../../lib/classes/product'
 
 RSpec.describe Output do
   context 'when defining the class' do

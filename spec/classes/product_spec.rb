@@ -1,4 +1,4 @@
-require_relative '../../classes/product'
+require_relative '../../lib/classes/product'
 
 RSpec.describe Product do
   context 'when defining the class' do

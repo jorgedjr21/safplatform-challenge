@@ -1,6 +1,6 @@
-require_relative './classes/input_reader'
-require_relative './classes/input_processor'
-require_relative './classes/output'
+require_relative './lib/classes/input_reader'
+require_relative './lib/classes/input_processor'
+require_relative './lib/classes/output'
 
 inputs = InputReader.new(file_name: 'input.txt').read
 cart = InputProcessor.new(inputs: inputs).to_cart

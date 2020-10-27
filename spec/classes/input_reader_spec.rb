@@ -1,4 +1,4 @@
-require_relative '../../classes/input_reader'
+require_relative '../../lib/classes/input_reader'
 
 RSpec.describe InputReader do
   context 'when defining the class' do

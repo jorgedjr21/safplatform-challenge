@@ -1,5 +1,5 @@
-require_relative '../../classes/cart'
-require_relative '../../classes/product'
+require_relative '../../lib/classes/cart'
+require_relative '../../lib/classes/product'
 
 RSpec.describe Cart do
   let(:product) { Product.new(name: 'music CD', price: 14.99) }

@@ -1,4 +1,4 @@
-require_relative '../../classes/input_processor'
+require_relative '../../lib/classes/input_processor'
 
 RSpec.describe InputProcessor do
   context 'when defining the class' do
