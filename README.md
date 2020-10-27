@@ -24,4 +24,4 @@ The available products can be found at: https://gist.github.com/safplatform/7923
 
 To run the tests, just run the following command:
 
-`rspec spec/classes`
+`rspec`
