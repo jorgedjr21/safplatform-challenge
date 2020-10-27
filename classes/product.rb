@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative 'tax'
 
 class Product
@@ -14,7 +16,20 @@ class Product
   private
 
   def set_taxed_price
-    value = Tax.product_tax(self) * price
-    @taxed_price = ((value * 20).round(4) / 20.0).round(2)
+    value = (Tax.product_tax(self) * price)
+    rounded = value.round(1)
+    diff = value - rounded
+
+    @taxed_price = if diff.positive? && diff < 0.05
+                     (rounded + 0.05).round(2)
+                   else
+                     value.round(2)
+                   end
+  end
+
+  def decimal_places(number)
+    return 0 if number.nil?
+
+    number.to_s.split('.').last.length
   end
 end
